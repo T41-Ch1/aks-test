@@ -1,0 +1,1 @@
+az aks create -g test -n test-aks -s Standard_B2s --node-count 1 --no-wait 
