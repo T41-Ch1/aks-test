@@ -3,3 +3,5 @@ az vm list-sizes -l eastus
 az vm create -g test -n test-vm --size Standard_B1s --image UbuntuLTS --no-wait 
 cat >> memo
 cat <<EOF >> memo
+az vm delete -n test-vm2 -g test --no-wait --yes
+az vm create -g test -n test-vm3 --image UbuntuLTS --generate-ssh-keys -o json
