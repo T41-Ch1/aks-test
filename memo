@@ -1,1 +1,5 @@
 az aks create -g test -n test-aks -s Standard_B2s --node-count 1 --no-wait 
+az vm list-sizes -l eastus
+az vm create -g test -n test-vm --size Standard_B1s --image UbuntuLTS --no-wait 
+cat >> memo
+cat <<EOF >> memo
