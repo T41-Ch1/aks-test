@@ -5,3 +5,5 @@ cat >> memo
 cat <<EOF >> memo
 az vm delete -n test-vm2 -g test --no-wait --yes
 az vm create -g test -n test-vm3 --image UbuntuLTS --generate-ssh-keys -o json
+az vm list-ip-addresses -g test
+az vm open-port -g test -n test-vm4 --port 6443,Z2379,2380,10250-10252 --priority 100 
